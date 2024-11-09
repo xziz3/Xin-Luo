@@ -1,0 +1,16 @@
+# New TunePad cell
+rhythm = [[36, 40, 45],[35, 40, 45],[35, 40, 43]]
+
+piano_beats = [4,2,2]
+
+# In the following function enumerate(), the meaning of return parameter is as follows
+# i represents the sequence of the object in rhythm
+# j represents the object itself
+
+for i,j in enumerate(rhythm):
+    playNote(j, beats = piano_beats[i])
+
+# Here I use transpose to raise the following tunes by two degrees 
+with transpose(2):
+    for i,j in enumerate(rhythm):
+        playNote(j, beats = piano_beats[i])

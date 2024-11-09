@@ -1,0 +1,16 @@
+# New TunePad cell
+from random import randint
+
+
+def longbeats(tune):
+    playNote(tune, beats=0.5)
+    
+    
+def shortbeats(tune):
+    playNote(tune, beats=0.25)
+    playNote(tune, beats=0.25)
+    
+if __name__== "__main__" :      
+    for i in range(0, 16):
+        longbeats(4) if (randint(0, 10) > 2) else shortbeats(4)
+

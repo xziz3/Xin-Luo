@@ -1,0 +1,26 @@
+# New TunePad cell
+
+#The parameter pattern is string that composed of 0,1,2
+def machine(tune,beats,pattern):
+    moveTo(0)
+    for s in pattern:
+        if s == '2':
+            playNote(tune, beats = beats, velocity = 100)
+        elif s == '1':
+            playNote(tune, beats = beats, velocity = 80)
+        else:
+            rest(beats)
+            
+            
+def playdrum():
+    machine(0,0.5,'11111111')
+    machine(6,0.25,'0000002000000020')
+    machine(10,0.25,'0000000212100000')
+    machine(4,0.25,'0121012101210121')
+    machine(2,0.25,'0000200001102000')
+    machine(0,0.25,'2100200021210000')
+       
+if __name__== "__main__" :      
+    playdrum()            
+
+

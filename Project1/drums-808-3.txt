@@ -1,0 +1,9 @@
+# New TunePad cell
+tunes = [43,43,43,46,38,38,38]
+
+beats = [1,0.5,0.5,0.5,0.5,0.5,1,0.5,0.5]
+
+# zip is dict in python, list tunes serves as key of dict, beats serves as value
+for temp in range(4):
+    for i,j in zip(tunes,beats):
+        playNote(i,j)

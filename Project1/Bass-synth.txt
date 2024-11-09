@@ -1,0 +1,23 @@
+# New TunePad cell
+import random 
+
+playNote(12, 0.25)
+rest(0.5)
+
+for i in range(4):
+    playNote([12,24],0.25)
+    
+rest(0.25)
+
+for i in range(2):
+    playNote([12, 24], 0.25)
+    
+rest(0.5)
+
+for i in range(4):
+    playNote([12,24],0.25)
+
+# Here I added a rand rest depends on whether the obtained random number is even or not
+    if(random.randint(0,10)%2 == 0):
+        rest(0.25)
+

@@ -1,0 +1,15 @@
+# New TunePad cell
+
+# Here I added my function of playNote, named it myown_play
+def myown_play(tune,beats= 0.25):
+    if isinstance(tune, int):
+        playNote(tune,beats)
+    elif isinstance(tune, list):
+        playNote(tune,beats)
+        
+        
+if __name__== "__main__" :    
+    myown_play(10)
+    myown_play(12,3)
+    myown_play([12,24],5)
+        
